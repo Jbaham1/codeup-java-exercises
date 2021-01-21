@@ -11,7 +11,14 @@ public class HelloWorld {
 //        char myChar = myString;
         //problem 4
 //        myString = 3.14159;
-        //only works if you use double quotes and doesnt work with numbers
-        System.out.println(myString);
+//        only works if you use double quotes and doesnt work with numbers
+//        System.out.println(myString);
+        //problem 5
+        long myNumber;
+//        System.out.println(myNumber);
+//        error
+        //problem 6
+//        myNumber = 3.14; needs "L" after number
+
     }
 }
