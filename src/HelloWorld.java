@@ -19,6 +19,12 @@ public class HelloWorld {
 //        error
         //problem 6
 //        myNumber = 3.14; needs "L" after number
-
+//problem 7
+        myNumber = 123L;
+        System.out.println(myNumber);
+        //problem 8
+        myNumber = 123;
+        System.out.println(myNumber);
+        //possibly works because it doesnt have a decimal point
     }
 }
