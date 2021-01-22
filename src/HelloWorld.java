@@ -35,7 +35,7 @@ public class HelloWorld {
         System.out.println(++x);
         System.out.println(x);
             //post decriment prints the original number while pre decriment adds to the original number before it prints.
-        String class = "Class";
+//        String class = "Class";
             //error because class is protected
     }
 
