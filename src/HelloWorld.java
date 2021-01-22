@@ -38,4 +38,5 @@ public class HelloWorld {
         String class = "Class";
             //error because class is protected
     }
+
 }
