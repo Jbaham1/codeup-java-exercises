@@ -1,9 +1,10 @@
+import java.util.Locale;
 import java.util.Scanner;
 public class Bob {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Talk to Bob. As him questions, give statements, ANYTHING!");
-        String userInput = scanner.nextLine();
+        System.out.println("Type to talk to Bob. ");
+        String userInput = scanner.nextLine().trim();
         boolean question =userInput.indexOf("?") != -1;
         boolean yell = userInput.indexOf("!") != -1;
         boolean ignore = userInput.length() < 1;
