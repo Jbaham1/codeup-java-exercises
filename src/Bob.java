@@ -5,9 +5,9 @@ public class Bob {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Type to talk to Bob. ");
         String userInput = scanner.nextLine().trim();
-        boolean question =userInput.indexOf("?") != -1;
-        boolean yell = userInput.indexOf("!") != -1;
-        boolean ignore = userInput.length() < 1;
+        boolean question =userInput.endsWith("?");
+        boolean yell = userInput.endsWith("!");
+        boolean ignore = userInput.isEmpty();
 
         if(question) {
             System.out.println("Sure");
