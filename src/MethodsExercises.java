@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MethodsExercises {
+public class MethodsExercises<userInput> {
     public static void main(String[] args) {
         System.out.println("Addition: " + addition(3, 2));
         System.out.println("Subtraction: " + subtraction(3, 2));
@@ -8,7 +8,8 @@ public class MethodsExercises {
         System.out.println("Division: " + division(6, 3));
         System.out.println("Modulus: " + modulus(7, 10));
         System.out.println("Multiplication sans '*': " + multiplication2(5, 5));
-        System.out.println(MethodsExercises.getInteger(1, 10));
+        System.out.println(getInteger(1, 10));
+        System.out.println(getFactorial(7));
     }
 
     //Problem 1
@@ -63,8 +64,27 @@ public class MethodsExercises {
             System.out.println("Enter a VALID number between 1 and 10: ");
             return getInteger(min, max);
         } else {
-            System.out.println("Your number is: " + userInput);
+            System.out.println("Your number is: ");
         }
+        return userInput;
+    }
+
+    //Problem 3
+    public static long getFactorial(long num) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a number between 1 and 10: ");
+        long userInput = input.nextInt();
+
+        for (long i = 1; i <= 10; i++) {
+
+            if (num > 10 || num < 1) {
+                return getFactorial(num);
+            } else {
+                long factorial = userInput * i;
+                System.out.println("!"+ i +" = " + factorial);
+            }
+        }
+        System.out.println("Do you want to continue?");
         return userInput;
     }
 
