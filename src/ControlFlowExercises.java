@@ -14,5 +14,9 @@ public class ControlFlowExercises {
             num++;
         } while(num <=100);
 //Problem 1C
+        for(int iter =5; iter <= 15; iter++){
+            System.out.println("i is " + iter);
+        }
     }
+    //Problem 2
 }
