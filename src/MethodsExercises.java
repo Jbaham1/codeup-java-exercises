@@ -64,33 +64,35 @@ public class MethodsExercises<userInput> {
             return getInteger(min, max);
         } else {
             System.out.println("Your number is: ");
+            return userInput;
         }
-        return userInput;
     }
 
     //Problem 3
     public static long getFactorial(long num) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter a number between 1 and 10: ");
+        System.out.println("Enter another number between 1 and 10: ");
         long userInput = input.nextInt();
-        long factorial = userInput;
+        long factorial = 1;
 
-        if (num > 10 || num < 1) {
-            return getFactorial(num);
+        if (userInput > 10 || userInput < 1) {
+            return getFactorial(userInput);
         } else {
-            for (long i = 1; i <= 10; i++) {
+            for (long i =1; i <= userInput; i++) {
                 factorial = factorial * i;
                 System.out.println("!" + i + " = " + factorial);
             }
         }
         System.out.println("Do you want to continue?");
+        //so yes or no
+        
         return userInput;
     }
 //Problem 4
-    public static int rollDice(int one, two){
-        Scanner dice = new Scanner(System.in);
-        System.out.println("How many sides of dice do you want?");
-        int userDice = dice.nextInt();
-    }
+//    public static int rollDice(int one, two){
+//        Scanner dice = new Scanner(System.in);
+//        System.out.println("How many sides of dice do you want?");
+//        int userDice = dice.nextInt();
+//    }
 }
 
