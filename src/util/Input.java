@@ -1,25 +1,54 @@
 package util;
+
 import java.util.Scanner;
 
-public class  main Input {
-    private Scanner input = new Scanner(System.in);
+public class Input {
+    private Scanner scanner;
 
-    public void  getString(){
-        System.out.println("Enter a string: ");
-        long userInput = input.nextInt();
-        System.out.println("Your string is: "+ userInput);
-    }
-    public void yesNo(){
+    public Input() {
+        this.scanner = new Scanner(System.in);
 
     }
-    public void getInt(int min, int max){
 
+    public String getString() {
+        return "hello";
     }
-    public void getInt(){
 
+    public boolean yesNo(char y) {
+        return true;
     }
-    public void getDouble(double min, double max){
 
+    public static int getInt(int min, int max) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number between " + min + "and" + max + ": ");// first prompt user to enter a number between min and max
+        int response = sc.nextInt();// then read the number
+        if (response >= min && response <= max) {// if the number is in range, return it
+            System.out.println("num in range ");
+            return response;
+        } else {
+            System.out.println("num not in range ");
+            return getInt(min, max);// else, return getInteger(min, max)
+
+
+        }
+    }
+    public static int getDouble(double min, double max) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number between " + min + "and" + max + ": ");// first prompt user to enter a number between min and max
+        int response = sc.nextInt();// then read the number
+        if (response >= min && response <= max) {// if the number is in range, return it
+            System.out.println("num in range ");
+            return response;
+        } else {
+            System.out.println("num not in range ");
+            return getDouble(min, max);// else, return getInteger(min, max)
+
+
+        }
+    }
+    public  double getDouble(){
+        System.out.println("ENTER DOUBLE : ");
+        return this.scanner.nextDouble();
     }
 }
 
