@@ -2,7 +2,7 @@ public class ArraysExercises {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
         System.out.println(numbers);
-        //numbers isnt called correctly
+        //numbers isnt called correctly shows memory location
         Person[] people = new Person[3];
         Person tariq = new Person("Tariq");
         Person james = new Person("James");
