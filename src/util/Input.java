@@ -14,8 +14,9 @@ public class Input {
         return "hello";
     }
 
-    public boolean yesNo(char y) {
-        return true;
+    public boolean yesNo() {
+        String answer = this.scanner.nextLine();
+        return (answer.toLowerCase().equals("y")|| answer.toLowerCase().equals("yes"));
     }
 
     public static int getInt(int min, int max) {
@@ -42,8 +43,6 @@ public class Input {
         } else {
             System.out.println("num not in range ");
             return getDouble(min, max);// else, return getInteger(min, max)
-
-
         }
     }
     public  double getDouble(){
