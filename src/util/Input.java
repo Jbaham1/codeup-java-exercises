@@ -3,52 +3,42 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner;
+    protected Scanner scanner;
 
-    public Input() {
+    public Input(){
         this.scanner = new Scanner(System.in);
-
     }
 
-    public String getString() {
-        return "hello";
+    public String getString(){
+//        System.out.println("Enter a string:");
+        return scanner.nextLine();
     }
 
-    public boolean yesNo() {
+    public boolean yesNo(){
+        System.out.println("Enter yes or no");
         String answer = this.scanner.nextLine();
-        return (answer.toLowerCase().equals("y")|| answer.toLowerCase().equals("yes"));
+        return(answer.toLowerCase().equals("y")||answer.toLowerCase().equals("yes"));
     }
 
-    public static int getInt(int min, int max) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number between " + min + "and" + max + ": ");// first prompt user to enter a number between min and max
-        int response = sc.nextInt();// then read the number
-        if (response >= min && response <= max) {// if the number is in range, return it
-            System.out.println("num in range ");
-            return response;
-        } else {
-            System.out.println("num not in range ");
-            return getInt(min, max);// else, return getInteger(min, max)
+    public int getInt(){
+//        System.out.println("Enter an integer");
+        return Integer.parseInt(scanner.nextLine());
+    }
 
-
+    public int getInt(int min, int max){
+        while(true){
+            System.out.println("Enter an integer between "+min+" and "+max+".");
+            int answer = this.scanner.nextInt();
+            if(answer>= min && answer<= max)
+                return answer;
         }
     }
-    public static int getDouble(double min, double max) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number between " + min + "and" + max + ": ");// first prompt user to enter a number between min and max
-        int response = sc.nextInt();// then read the number
-        if (response >= min && response <= max) {// if the number is in range, return it
-            System.out.println("num in range ");
-            return response;
-        } else {
-            System.out.println("num not in range ");
-            return getDouble(min, max);// else, return getInteger(min, max)
-        }
+
+    public double getDouble(){
+        System.out.println("Enter a double: ");
+        return scanner.nextDouble();
     }
-    public  double getDouble(){
-        System.out.println("ENTER DOUBLE : ");
-        return this.scanner.nextDouble();
-    }
+
 }
 
 
