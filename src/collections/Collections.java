@@ -1,5 +1,6 @@
 package collections;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -27,12 +28,32 @@ public class Collections {
         result = roasts.contains("espresso");
         System.out.println(result ? "Contains espresso!" : "Does not contain espresso!");
         // 3. Find the last index of "medium" in the array
+        int index = roasts.lastIndexOf("medium");
+        System.out.println("Last index of medium is: " + index);
         // 4. Check if the array list is empty
+        System.out.println(roasts.isEmpty() ? "List is empty" : "List is not empty");
+
         // 5. Assign the array list an empty ArrayList object, and then check if empty
+        roasts = new ArrayList<>();
+        System.out.println(roasts.isEmpty() ? "02 is empty" : "02 is not empty");
+
         // 6. Remove the espresso roast
+        roasts.add("light");
+        roasts.add("light");
+        roasts.add("medium");
+        roasts.add("medium");
+        roasts.add("dark");
+        roasts.add("espresso");
+        System.out.println("Original roast: " + roasts);
+        roasts.remove("espresso");
+        roasts.remove("espresso");
+        System.out.println("Second roast: " + roasts);
+        roasts.remove("light");
+        System.out.println("Third roast: " + roasts);
+
         // 7. Remove the element at index 2
-
-
+        roasts.remove(2);
+        System.out.println("Remove index 2: " + roasts);
 
         // *************************************************** //
         // ********* Hash Maps and their Methods ************* //
@@ -51,6 +72,6 @@ public class Collections {
         // 7. Use the .replace() method to change Vivian's username to "viviancandev"
         // 8. Use the .clear() method to clear the map
         // 9. Use the .isEmpty() method to verify that it was cleared
-
     }
 }
+
