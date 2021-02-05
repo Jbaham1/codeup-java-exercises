@@ -48,21 +48,28 @@ public class GradesApplication {
         switch (userChoice)
         {
             case "edith":
-                System.out.println("Edith");
+                System.out.println("Name: Edith - User name: XedithX14");
+                System.out.println("Edith's overall grade is: "+ edith.getGradeAverage());
+
+
                 break;
             case "quan":
-                System.out.println("Quan");
+                System.out.println("Name: Quan - User name: XquanX11");
+                System.out.println("Quan's overall grade is: "+ edith.getGradeAverage());
                 break;
             case "chrissette":
-                System.out.println("Chrissette");
+                System.out.println("Name: Chrissette - User name: XchrissetteX13");
+                System.out.println("Chrissette's overall grade is: "+ edith.getGradeAverage());
                 break;
             case "braden":
-                System.out.println("Braden");
+                System.out.println("Name: Braden - User name: XbradenX12");
+                System.out.println("Braden's overall grade is: "+ edith.getGradeAverage());
                 break;
             default:
-                System.out.println("Please make a valid selection...");
-
+                System.out.println("Your selection was invalid");
+                break;
         }
+
 
     }
 }
